@@ -10,7 +10,7 @@ class App extends Component {
     this.getRandomCatFact();
   }
 
-  getRandomCatFact() {
+  getRandomCatFact = () => {
     axios.get("https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com/facts/random").then(response => {
       this.setState({
         catFact: response.data.text
@@ -22,6 +22,7 @@ class App extends Component {
     return (
       <div>
         <p> {this.state.catFact} </p>
+        <button onClick={this.getRandomCatFact}> Meow! </button>
       </div>
     );
   }
