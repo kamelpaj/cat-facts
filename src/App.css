@@ -10,12 +10,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
     segoe ui, arial, sans-serif;
   background: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   cursor: default;
 }
 
@@ -37,7 +31,26 @@ body {
   align-items: center;
   color: white;
   font-weight: 800;
-  font-size: 4em;
+  font-size: 2em;
+  text-align: center;
   will-change: transform, opacity;
   text-shadow: 0px 2px 40px #00000020, 0px 2px 5px #00000030;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  /*
+    Tablets
+  */
+  .colorfulMain > div {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /*
+    Desktop
+  */
+  .colorfulMain > div {
+    font-size: 4em;
+  }
 }
